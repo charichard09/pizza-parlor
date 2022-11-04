@@ -75,9 +75,20 @@ Pizza.prototype.totalCost = function () {
 }
 
 
-
-
 //UI Logic
+function handleRestartButton () {
+  for (const pizzaUl of Array.from(document.querySelectorAll("ul"))) {
+    pizzaUl.remove();
+  }
+
+  for (const pizzaH6 of Array.from(document.querySelectorAll("h6"))) {
+    pizzaH6.remove();
+  }
+
+  document.getElementById("total").remove();
+  document.getElementById("restart").setAttribute("class", "hidden");
+}
+
 function displayTotal(pizzaCosts) {
   if (document.body.contains(document.getElementById("total"))) {
     document.getElementById("total").remove();
@@ -93,7 +104,6 @@ function displayTotal(pizzaCosts) {
   totalH5.setAttribute("id", "total")
   document.getElementById("output-div").after(totalH5);
 }
-
 
 function displayPizza(pizza) {
   const pizzaUl = document.createElement("ul");
@@ -112,6 +122,7 @@ function displayPizza(pizza) {
   pizzaH6.append(pizza.size + " pizza:");
   document.getElementById("pizza-output").after(pizzaUl);
   document.getElementById("pizza-output").after(pizzaH6);
+  document.getElementById("restart").removeAttribute("class");
 }
 
 function handleFormSubmission (event) {
@@ -143,4 +154,5 @@ function handleFormSubmission (event) {
 
 window.addEventListener("load", function() {
   document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
+  document.getElementById("restart").addEventListener("click", handleRestartButton);
 });
