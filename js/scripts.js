@@ -76,16 +76,23 @@ Pizza.prototype.totalCost = function () {
 
 
 //UI Logic
-function highlightPizza (event) {
-  for (const pizzaImg of Array.from(document.querySelectorAll("input[name='pizza-sizes']"))) {
-    pizzaImg.removeAttribute("style");
-    pizzaImg.previousSibling.style = "display: none;";
-  }
-
-  for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
-    pizzaImg.removeAttribute("style");
-  }
-  event.target.style = "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);"
+function highlightPizza () {
+  document.getElementById("small-pizza").addEventListener("click", function(event) {
+    event.target.setAttribute("style", "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);");
+    document.getElementById("medium-pizza").removeAttribute("style");
+    document.getElementById("large-pizza").removeAttribute("style");
+  });
+  document.getElementById("medium-pizza").addEventListener("click", function(event) {
+    document.getElementById("small-pizza").removeAttribute("style");
+    event.target.setAttribute("style", "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);");
+    document.getElementById("large-pizza").removeAttribute("style");
+  });
+  document.getElementById("large-pizza").addEventListener("click", function(event) {
+    document.getElementById("small-pizza").removeAttribute("style");
+    document.getElementById("medium-pizza").removeAttribute("style");
+    event.target.setAttribute("style", 
+    "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);");
+  });
 }
 
 function handleRestartButton () {
@@ -95,6 +102,10 @@ function handleRestartButton () {
 
   for (const pizzaH6 of Array.from(document.querySelectorAll("h6"))) {
     pizzaH6.remove();
+  }
+
+  for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
+    pizzaImg.removeAttribute("style");
   }
 
   document.getElementById("total").remove();
@@ -160,12 +171,9 @@ function handleFormSubmission (event) {
   displayTotal(pizzaCostsArray);
 }
 
-//add checkout button and function that when pressed will remove form "form-div", change h3 "Your Cart" to "Final Order"
-// add a total printed at the bottom of pizza displays, and a "pay button" that returns "ERROR: Still learning how to steal credit card info"
-
 
 window.addEventListener("load", function() {
   document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
   document.getElementById("restart").addEventListener("click", handleRestartButton);
-  document.getElementById("pizza-sizes").addEventListener("click", highlightPizza);
+  highlightPizza();
 });

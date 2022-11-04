@@ -6,3 +6,15 @@ body {
 .hidden {
   display: none;
 }
+
+#small-pizza {
+  margin-top: 140px;
+}
+
+#medium-pizza {
+  margin-top: 70px;
+}
+
+#large-pizza {
+  width: 95%;
+}
