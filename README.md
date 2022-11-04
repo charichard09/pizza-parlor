@@ -1,19 +1,40 @@
 <!-- pseusdo code -->
 Prompt: Create a website where a user can make a pizza. Have the options to choose individual toppings and size then give a total. 
 
-define a Pizza function constructor
+define a Pizza function constructor (sizeSelect, cheeseBoolean, meatArray, non-meatArray, sauceSelect)
 {
-  this.toppings = {function to add selected pepperoni, cheeseType, artichoke, chicken}
-  this.size = size;
-  this.cost = cost (or base cost)
+  this.size = sizeSelect;
+  this.cheese = cheeseBoolean;
+  this.meat = meatArray;
+  this.non-meat = non-meatArray;
+  this.sauce = sauceSelect;
+  this.cost = 0;
 }
   test if it makes a pizza obj pizza1
 
 define Pizza.prototype.totalCost()
-  define a toppings = {
-    cheese: 1,
+  define object prices = {
+    size: {
+      small: 11,
+      medium: 13,
+      large: 15
+    }
+
+    cheese: true (add 1, if false add 0)
+
     meat: {
-      chicken:   
+      chicken: 2,  
+      ham: 1,
+      pepperoni: 1,
+      sausage: 1
+    }
+    non-meat: {
+      pineapple: 1,
+      jalapeno: 1,
+      onion: 0,
+      spinach: 0,
+      mushroom: 1,
+      olive: 1
     }
     sauce: {
       marinara: 0,
@@ -24,24 +45,34 @@ define Pizza.prototype.totalCost()
     }
   }
 
-  define a size = {
-    small: 11,
-    medium: 13,
-    large: 15
-  }
+  loop through Pizza object keys, add values to get total?
+  return total
+
+
+
 
       make this dynamic? as users select toppings, everytime call totalCost() to print updated cost
 
 have a checkout() function attached with a button element type="submit" to print final pizza properties and cost
 
 UI pseudocode:
+radio form of images for size small, medium, large 
+  put into 3 columns?
+
 checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output)
 
 radio form for choice of sauce input that will go into final pizza output
   marinara, honey bbq, garlic parmesan, alfredo, ranch
     NON-MVP: make this a checkbox that when checked, will reveal radio form for sauces
 
-checkbox form for choice of meat
+checkbox form for choice of meat input: chicken, ham, pepperoni, sausage
+
+checkbox form for choice of non-meat input: pineapple, jalapeno, onion, spinach, mushroom, olive
+
+"checkout" button element with type="submit"
+
+area below to show final pizza properties and price after hitting submit
+
 
 
 NON-MVP: add pictures for each option, and a final pizza picture with all
@@ -52,28 +83,22 @@ add option to add another Pizza object to their order
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- TDD -->
+
+Describe: Pizza()
+
+Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, non-meatArray, sauceSelect"
+Code: const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+Expected Output: pizza1 /w {
+  size: "medium",
+  cheese: true,
+  meat: ["sausage", "pepperoni"],
+  non-meat: ["jalapeno", "onion"],
+  sauce: "marinara"
+  cost: 0
+  }
+
+  
+  Describe: Pizza.prototype.totalCost()
+
+  Test1: ""
