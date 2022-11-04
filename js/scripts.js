@@ -9,13 +9,6 @@ function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect)
   this.cost = 0;
 }
 
-// Test4: "It should check for ["jalapeno", "onion"] and add 1 to pizza1 cost"
-// Code: 
-// const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
-// pizza1.totalCost();
-// Expected Output:
-// pizza1.cost === 17
-
 Pizza.prototype.totalCost = function () {
   switch (this.size) {
     case ("small"):
@@ -86,7 +79,17 @@ Pizza.prototype.totalCost = function () {
 
 
 //UI Logic
-const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+//const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 
+function handleFormSubmission (event) {
+  event.preventDefault();
+
+  const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
+
+  let pizza1 = new Pizza(pizzaSizeInput, true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+}
 
 // Don't forget to add window.addEventListener("load", function);
+window.addEventListener("load", function() {
+  document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
+});

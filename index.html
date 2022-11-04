@@ -9,10 +9,32 @@
   <script src="./js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
-<body>
-  
-  <div id="header">
+<body class="jumbotron">
+
+  <div id="header" class="container">
     <h1>Pizza Parlor</h1>
+  </div>
+
+  <div id="form-div" class="container">
+    <form id="pizza-form">
+      <div id="pizza-sizes" class="container">
+        <div class="row">
+          <div class="col-4">
+            <label for="small-size">smallImg</label>
+            <input id="small-size" type="radio" name="pizzaSizes" value="small">
+          </div>
+          <div class="col-4">
+            <label for="medium-size">mediumImg</label>
+            <input id="medium-size" type="radio" name="pizzaSizes" value="medium" checked>
+          </div>
+          <div class="col-4">
+            <label for="large-size">largeImg</label>
+            <input id="large-size" type="radio" name="pizzaSizes" value="large">
+          </div>
+        </div>
+      </div>
+    <button type="submit">Checkout</button>
+    </form>
   </div>
 </body>
 </html>

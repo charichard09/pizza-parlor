@@ -1,43 +1,7 @@
 <!-- pseusdo code -->
 Prompt: Create a website where a user can make a pizza. Have the options to choose individual toppings and size then give a total. 
 
-define a Pizza function constructor (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect)
-{
-  this.size = sizeSelect;
-  this.cheese = cheeseBoolean;
-  this.meat = meatArray;
-  this.nonMeat = nonMeatArray;
-  this.sauce = sauceSelect;
-  this.cost = 0;
-}
-  test if it makes a pizza obj pizza1
 
-define Pizza.prototype.totalCost()
-  define object prices = {
-    size: {
-      small: 11,
-      medium: 13,
-      large: 15
-    }
-    cheese: 1
-    meat: {
-      chicken: 2,  
-      ham: 1,
-      pepperoni: 1,
-      sausage: 1
-    }
-    non-meat: {
-      pineapple: 1,
-      jalapeno: 1,
-      onion: 0,
-      spinach: 0,
-      mushroom: 1,
-      olive: 1
-    }
-  }
-
-  loop through Pizza object keys, add values to get total?
-  return total
 
 
 
