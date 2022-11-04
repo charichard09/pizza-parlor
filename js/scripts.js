@@ -76,6 +76,13 @@ Pizza.prototype.totalCost = function () {
 
 
 //UI Logic
+function highlightPizza (event) {
+  // for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
+  //   pizzaImg.removeAttribute("style");
+  // }
+  event.target.style = "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);"
+}
+
 function handleRestartButton () {
   for (const pizzaUl of Array.from(document.querySelectorAll("ul"))) {
     pizzaUl.remove();
@@ -155,4 +162,5 @@ function handleFormSubmission (event) {
 window.addEventListener("load", function() {
   document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
   document.getElementById("restart").addEventListener("click", handleRestartButton);
+  document.getElementById("pizza-sizes").addEventListener("click", highlightPizza);
 });
