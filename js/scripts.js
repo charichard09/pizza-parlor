@@ -86,10 +86,14 @@ function displayPizza(pizza) {
   for (const key of Object.keys(pizza)) {
     let pizzaLi = document.createElement("li");
 
+    if (key === "cost") {
+      pizzaLi.setAttribute("value", pizza["cost"]);
+    }
     pizzaLi.append(key + ": " + pizza[key].toString());
     pizzaUl.append(pizzaLi);
+    
   }
-  // pizzaUl.setAttribute("value", "pizza");
+  //instead of this, need to incorporate cart object, then itemNumber (same as contactId) and assignItemNumber (same as)?
   document.getElementById("pizza-output").after(pizzaUl);
 }
 
@@ -110,12 +114,19 @@ function handleFormSubmission (event) {
   console.log(newPizza);
 
   displayPizza(newPizza);
+
+  let totalh5 = document.createElement("h5");
+  const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
+  let total = 0; 
+  total = pizzaCostsArray.map(cost => total += parseInt(cost));
+  totalh5.append(total);
+  document.getElementById("output-div").after(totalh5);
 }
 
 //add checkout button and function that when pressed will remove form "form-div", change h3 "Your Cart" to "Final Order"
 // add a total printed at the bottom of pizza displays, and a "pay button" that returns "ERROR: Still learning how to steal credit card info"
 
-// Don't forget to add window.addEventListener("load", function);
+
 window.addEventListener("load", function() {
   document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
 });
