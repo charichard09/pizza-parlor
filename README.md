@@ -1,12 +1,12 @@
 <!-- pseusdo code -->
 Prompt: Create a website where a user can make a pizza. Have the options to choose individual toppings and size then give a total. 
 
-define a Pizza function constructor (sizeSelect, cheeseBoolean, meatArray, non-meatArray, sauceSelect)
+define a Pizza function constructor (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect)
 {
   this.size = sizeSelect;
   this.cheese = cheeseBoolean;
   this.meat = meatArray;
-  this.non-meat = non-meatArray;
+  this.nonMeat = nonMeatArray;
   this.sauce = sauceSelect;
   this.cost = 0;
 }
@@ -78,7 +78,7 @@ add option to add another Pizza object to their order
 
 Describe: Pizza()
 
-Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, non-meatArray, sauceSelect"
+Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect"
 Code: 
 const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 Expected Output: 
