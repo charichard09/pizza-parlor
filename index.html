@@ -33,8 +33,20 @@
           </div>
         </div>
       </div>
+
+      <!-- checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output) -->
+      <div id="pizza-cheese" class="container">
+        <label for="cheese">Cheese</label>
+        <input id="cheese" type="checkbox" name="cheese-box" value="true">  
+      </div>
     <button type="submit">Checkout</button>
     </form>
+  </div>
+
+  <div id="output-div" class="container">
+    <h3>Your Pizza:</h3>
+    <ul id="pizza-ul">
+    </ul>
   </div>
 </body>
 </html>

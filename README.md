@@ -10,6 +10,8 @@ Prompt: Create a website where a user can make a pizza. Have the options to choo
 
 have a checkout() function attached with a button element type="submit" to print final pizza properties and cost
 
+
+
 UI pseudocode:
 radio form of images for size small, medium, large 
   put into 3 columns?

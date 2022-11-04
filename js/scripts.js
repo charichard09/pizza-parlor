@@ -1,5 +1,4 @@
 //Business Logic
-
 function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect) {
   this.size = sizeSelect;
   this.cheese = cheeseBoolean;
@@ -79,14 +78,21 @@ Pizza.prototype.totalCost = function () {
 
 
 //UI Logic
-//const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
-
 function handleFormSubmission (event) {
   event.preventDefault();
   const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
+  let pizzaCheeseInput;
+  if (event.target.contains(document.querySelector("input[name='cheese-box']:checked"))) {
+    pizzaCheeseInput = true;
+  } else {
+    pizzaCheeseInput = false;
+  }
+  
 
-  let pizza1 = new Pizza(pizzaSizeInput, true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
   console.log(pizza1);
+
+  displayPizza();
 }
 
 // Don't forget to add window.addEventListener("load", function);
