@@ -15,107 +15,112 @@
     <h1>Pizza Parlor</h1>
   </div>
 
-  <div id="form-div" class="container">
-    <form id="pizza-form">
-      
-      <div id="pizza-sizes" class="container">
-        <h3>Sizes:</h3>
-        <div class="row">
-          <div class="col-4">
-            <input id="small-size" type="radio" name="pizza-sizes" value="small">
-            <label for="small-size">smallImg</label>
+  <div class="row">
+    <div class="col-8">
+      <div id="form-div" class="container">
+        <form id="pizza-form">
+          
+          <div id="pizza-sizes" class="container">
+            <h3>Sizes:</h3>
+            <div class="row">
+              <div class="col-4">
+                <input id="small-size" type="radio" name="pizza-sizes" value="small">
+                <label for="small-size">smallImg</label>
+              </div>
+              <div class="col-4">
+                <input id="medium-size" type="radio" name="pizza-sizes" value="medium" checked>
+                <label for="medium-size">mediumImg</label>
+              </div>
+              <div class="col-4">
+                <input id="large-size" type="radio" name="pizza-sizes" value="large">
+                <label for="large-size">largeImg</label>
+              </div>
+            </div>
           </div>
-          <div class="col-4">
-            <input id="medium-size" type="radio" name="pizza-sizes" value="medium" checked>
-            <label for="medium-size">mediumImg</label>
+
+          <!-- checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output) -->
+          <div id="pizza-cheese" class="container">
+            <h3>Cheese:</h3>
+            <input id="cheese" type="checkbox" name="cheese-box" value="no">  
+            <label for="cheese">Cheese</label>
           </div>
-          <div class="col-4">
-            <input id="large-size" type="radio" name="pizza-sizes" value="large">
-            <label for="large-size">largeImg</label>
+
+          <!-- checkbox form for choice of meat input: chicken, ham, pepperoni, sausage -->
+          <div id="pizza-meat" class="container">
+            <h3>Meats:</h3>
+            <div class="row">
+              <div class="col-6">
+                <input id="pepperoni" type="checkbox" name="meat-box" value=" pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+                <br>
+                <input id="sausage" type="checkbox" name="meat-box" value=" sausage">
+                <label for="sausage">Sausage</label>
+              </div>
+              <div class="col-6">
+                <input id="ham" type="checkbox" name="meat-box" value=" ham">
+                <label for="ham">Ham</label>
+                <br>
+                <input id="chicken" type="checkbox" name="meat-box" value=" chicken">
+                <label for="chicken">Chicken</label>
+              </div>
+            </div>
           </div>
+
+          <!-- checkbox form for choice of non-meat input: pineapple, honey-bbq, onion, spinach, mushroom, olive -->
+          <div id="pizza-other" class="container">
+            <h3>Others:</h3>
+            <div class="row">
+              <div class="col-6">
+                <input id="pineapple" type="checkbox" name="other-box" value=" pineapple">
+                <label for="pineapple">Pineapple</label>
+                <br>
+                <input id="jalapeno" type="checkbox" name="other-box" value=" jalapeno">
+                <label for="jalapeno">Jalapeno</label>
+                <br>
+                <input id="onion" type="checkbox" name="other-box" value=" onion">
+                <label for="onion">Onion</label>
+              </div>
+              <div class="col-6">
+                <input id="spinach" type="checkbox" name="other-box" value=" spinach">
+                <label for="spinach">Spinach</label>
+                <br>
+                <input id="mushroom" type="checkbox" name="other-box" value=" mushroom">
+                <label for="mushroom">Mushroom</label>
+                <br>
+                <input id="olive" type="checkbox" name="other-box" value=" olive">
+                <label for="olive">Olive</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- radio form for choice of sauce: marinara, honey bbq, garlic parmesan, alfredo, ranch -->
+          <div id="pizza-sauce" class="container">
+            <h3>Sauces:</h3>
+                <input id="marinara" type="radio" name="pizza-sauces" value=" marinara" checked>
+                <label for="marinara">Marinara</label>
+                <br>
+                <input id="honey-bbq" type="radio" name="pizza-sauces" value=" honey bbq">
+                <label for="honey-bbq">Honey Bbq</label>
+                <br>
+                <input id="garlic-parmesan" type="radio" name="pizza-sauces" value=" garlic parmesan">
+                <label for="garlic-parmesan">Garlic Parmesan</label>
+                <br>
+                <input id="alfredo" type="radio" name="pizza-sauces" value=" alfredo">
+                <label for="alfredo">Alfredo</label>
+                <br>
+                <input id="ranch" type="radio" name="pizza-sauces" value=" ranch">
+                <label for="ranch">Ranch</label>
+          </div>
+
+        <button type="submit">Add Pizza</button>
+        </form>
+      </div>
+    </div>
+      <div class="col-4">
+        <div id="output-div" class="container">
+          <h3 id="pizza-output">Your Cart:</h3>
         </div>
       </div>
-
-      <!-- checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output) -->
-      <div id="pizza-cheese" class="container">
-        <h3>Cheese:</h3>
-        <input id="cheese" type="checkbox" name="cheese-box" value="no">  
-        <label for="cheese">Cheese</label>
-      </div>
-
-      <!-- checkbox form for choice of meat input: chicken, ham, pepperoni, sausage -->
-      <div id="pizza-meat" class="container">
-        <h3>Meats:</h3>
-        <div class="row">
-          <div class="col-6">
-            <input id="pepperoni" type="checkbox" name="meat-box" value=" pepperoni">
-            <label for="pepperoni">Pepperoni</label>
-            <br>
-            <input id="sausage" type="checkbox" name="meat-box" value=" sausage">
-            <label for="sausage">Sausage</label>
-          </div>
-          <div class="col-6">
-            <input id="ham" type="checkbox" name="meat-box" value=" ham">
-            <label for="ham">Ham</label>
-            <br>
-            <input id="chicken" type="checkbox" name="meat-box" value=" chicken">
-            <label for="chicken">Chicken</label>
-          </div>
-        </div>
-      </div>
-
-      <!-- checkbox form for choice of non-meat input: pineapple, honey-bbq, onion, spinach, mushroom, olive -->
-      <div id="pizza-other" class="container">
-        <h3>Others:</h3>
-        <div class="row">
-          <div class="col-6">
-            <input id="pineapple" type="checkbox" name="other-box" value=" pineapple">
-            <label for="pineapple">Pineapple</label>
-            <br>
-            <input id="jalapeno" type="checkbox" name="other-box" value=" jalapeno">
-            <label for="jalapeno">Jalapeno</label>
-            <br>
-            <input id="onion" type="checkbox" name="other-box" value=" onion">
-            <label for="onion">Onion</label>
-          </div>
-          <div class="col-6">
-            <input id="spinach" type="checkbox" name="other-box" value=" spinach">
-            <label for="spinach">Spinach</label>
-            <br>
-            <input id="mushroom" type="checkbox" name="other-box" value=" mushroom">
-            <label for="mushroom">Mushroom</label>
-            <br>
-            <input id="olive" type="checkbox" name="other-box" value=" olive">
-            <label for="olive">Olive</label>
-          </div>
-        </div>
-      </div>
-
-      <!-- radio form for choice of sauce: marinara, honey bbq, garlic parmesan, alfredo, ranch -->
-      <div id="pizza-sauce" class="container">
-        <h3>Sauces:</h3>
-            <input id="marinara" type="radio" name="pizza-sauces" value=" marinara" checked>
-            <label for="marinara">Marinara</label>
-            <br>
-            <input id="honey-bbq" type="radio" name="pizza-sauces" value=" honey bbq">
-            <label for="honey-bbq">Honey Bbq</label>
-            <br>
-            <input id="garlic-parmesan" type="radio" name="pizza-sauces" value=" garlic parmesan">
-            <label for="garlic-parmesan">Garlic Parmesan</label>
-            <br>
-            <input id="alfredo" type="radio" name="pizza-sauces" value=" alfredo">
-            <label for="alfredo">Alfredo</label>
-            <br>
-            <input id="ranch" type="radio" name="pizza-sauces" value=" ranch">
-            <label for="ranch">Ranch</label>
-      </div>
-
-    <button type="submit">Add Pizza</button>
-    </form>
-  </div>
-
-  <div id="output-div" class="container">
-    <h3 id="pizza-output">Your Cart:</h3>
   </div>
 </body>
 </html>
