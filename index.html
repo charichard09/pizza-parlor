@@ -22,15 +22,15 @@
         <h3>Sizes:</h3>
         <div class="row">
           <div class="col-4">
-            <input id="small-size" type="radio" name="pizzaSizes" value="small">
+            <input id="small-size" type="radio" name="pizza-sizes" value="small">
             <label for="small-size">smallImg</label>
           </div>
           <div class="col-4">
-            <input id="medium-size" type="radio" name="pizzaSizes" value="medium" checked>
+            <input id="medium-size" type="radio" name="pizza-sizes" value="medium" checked>
             <label for="medium-size">mediumImg</label>
           </div>
           <div class="col-4">
-            <input id="large-size" type="radio" name="pizzaSizes" value="large">
+            <input id="large-size" type="radio" name="pizza-sizes" value="large">
             <label for="large-size">largeImg</label>
           </div>
         </div>
@@ -64,34 +64,51 @@
         </div>
       </div>
 
-      <!-- checkbox form for choice of non-meat input: pineapple, jalapeno, onion, spinach, mushroom, olive -->
-      <div id="pizza-non-meat" class="container">
-        <h3>Meats:</h3>
+      <!-- checkbox form for choice of non-meat input: pineapple, honey-bbq, onion, spinach, mushroom, olive -->
+      <div id="pizza-other" class="container">
+        <h3>Others:</h3>
         <div class="row">
           <div class="col-6">
-            <input id="pineapple" type="checkbox" name="non-meat-box" value=" pineapple">
+            <input id="pineapple" type="checkbox" name="other-box" value=" pineapple">
             <label for="pineapple">Pineapple</label>
             <br>
-            <input id="jalapeno" type="checkbox" name="non-meat-box" value=" jalapeno">
+            <input id="jalapeno" type="checkbox" name="other-box" value=" jalapeno">
             <label for="jalapeno">Jalapeno</label>
             <br>
-            <input id="onion" type="checkbox" name="non-meat-box" value=" onion">
+            <input id="onion" type="checkbox" name="other-box" value=" onion">
             <label for="onion">Onion</label>
           </div>
           <div class="col-6">
-            <input id="spinach" type="checkbox" name="non-meat-box" value=" spinach">
+            <input id="spinach" type="checkbox" name="other-box" value=" spinach">
             <label for="spinach">Spinach</label>
             <br>
-            <input id="mushroom" type="checkbox" name="non-meat-box" value=" mushroom">
+            <input id="mushroom" type="checkbox" name="other-box" value=" mushroom">
             <label for="mushroom">Mushroom</label>
             <br>
-            <input id="olive" type="checkbox" name="non-meat-box" value=" olive">
+            <input id="olive" type="checkbox" name="other-box" value=" olive">
             <label for="olive">Olive</label>
           </div>
         </div>
       </div>
 
       <!-- radio form for choice of sauce: marinara, honey bbq, garlic parmesan, alfredo, ranch -->
+      <div id="pizza-sauce" class="container">
+        <h3>Sauces:</h3>
+            <input id="marinara" type="radio" name="pizza-sauces" value=" marinara" checked>
+            <label for="marinara">Marinara</label>
+            <br>
+            <input id="honey-bbq" type="radio" name="pizza-sauces" value=" honey bbq">
+            <label for="honey-bbq">Honey Bbq</label>
+            <br>
+            <input id="garlic-parmesan" type="radio" name="pizza-sauces" value=" garlic parmesan">
+            <label for="garlic-parmesan">Garlic Parmesan</label>
+            <br>
+            <input id="alfredo" type="radio" name="pizza-sauces" value=" alfredo">
+            <label for="alfredo">Alfredo</label>
+            <br>
+            <input id="ranch" type="radio" name="pizza-sauces" value=" ranch">
+            <label for="ranch">Ranch</label>
+      </div>
 
     <button type="submit">Add Pizza</button>
     </form>

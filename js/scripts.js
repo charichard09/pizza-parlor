@@ -1,9 +1,9 @@
 //Business Logic
-function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect) {
+function Pizza (sizeSelect, cheeseBoolean, meatArray, otherArray, sauceSelect) {
   this.size = sizeSelect;
   this.cheese = cheeseBoolean;
   this.meats = meatArray;
-  this.nonMeats = nonMeatArray;
+  this.others = otherArray;
   this.sauce = sauceSelect;
   this.cost = 0;
 }
@@ -46,8 +46,8 @@ Pizza.prototype.totalCost = function () {
     }
   }
 
-  for (const nonMeat of this.nonMeats) {
-    switch (nonMeat) {
+  for (const other of this.others) {
+    switch (other) {
       case ("pineapple"):
         this.cost += 1;
         break; 
@@ -78,9 +78,26 @@ Pizza.prototype.totalCost = function () {
 
 
 //UI Logic
+function displayTotal(pizzaCosts) {
+  if (document.body.contains(document.getElementById("total"))) {
+    document.getElementById("total").remove();
+  }
+
+  let total = 0;
+  let totalH5 = document.createElement("h5");
+
+  for (const cost of pizzaCosts) {
+    total += parseInt(cost);
+  }
+  totalH5.append("Total: " + total.toString());
+  totalH5.setAttribute("id", "total")
+  document.getElementById("output-div").after(totalH5);
+}
+
+
 function displayPizza(pizza) {
   const pizzaUl = document.createElement("ul");
-
+  const pizzaH6 = document.createElement("h6");
   pizza.totalCost();
 
   for (const key of Object.keys(pizza)) {
@@ -91,36 +108,33 @@ function displayPizza(pizza) {
     }
     pizzaLi.append(key + ": " + pizza[key].toString());
     pizzaUl.append(pizzaLi);
-    
   }
-  //instead of this, need to incorporate cart object, then itemNumber (same as contactId) and assignItemNumber (same as)?
+  pizzaH6.append(pizza.size + " pizza:");
   document.getElementById("pizza-output").after(pizzaUl);
+  document.getElementById("pizza-output").after(pizzaH6);
 }
 
 function handleFormSubmission (event) {
   event.preventDefault();
-  const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
+  const pizzaSizeInput = document.querySelector("input[name='pizza-sizes']:checked").value;
   const pizzaMeatInputArray = Array.from(document.querySelectorAll("input[name='meat-box']:checked")).map(element => element.value);
-  const pizzaNonMeatInputArray = Array.from(document.querySelectorAll("input[name='non-meat-box']:checked")).map(element => element.value)
+  const pizzaOtherInputArray = Array.from(document.querySelectorAll("input[name='other-box']:checked")).map(element => element.value)
+  const pizzaSauceInput = document.querySelector("input[name='pizza-sauces']:checked").value;
   let pizzaCheeseInput;
   if (event.target.contains(document.querySelector("input[name='cheese-box']:checked"))) {
     pizzaCheeseInput = "yes";
   } else {
     pizzaCheeseInput = "no";
   }
-  
 
-  let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaNonMeatInputArray, "marinara");
+
+  let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaOtherInputArray, pizzaSauceInput);
   console.log(newPizza);
 
   displayPizza(newPizza);
 
-  let totalh5 = document.createElement("h5");
   const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
-  let total = 0; 
-  total = pizzaCostsArray.map(cost => total += parseInt(cost));
-  totalh5.append(total);
-  document.getElementById("output-div").after(totalh5);
+  displayTotal(pizzaCostsArray);
 }
 
 //add checkout button and function that when pressed will remove form "form-div", change h3 "Your Cart" to "Final Order"
