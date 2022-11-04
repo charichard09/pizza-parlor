@@ -89,6 +89,7 @@ function displayPizza(pizza) {
     pizzaLi.append(key + ": " + pizza[key].toString());
     pizzaUl.append(pizzaLi);
   }
+  // pizzaUl.setAttribute("value", "pizza");
   document.getElementById("pizza-output").after(pizzaUl);
 }
 
@@ -105,13 +106,14 @@ function handleFormSubmission (event) {
   }
   
 
-  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaNonMeatInputArray, "marinara");
-  console.log(pizza1);
+  let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaNonMeatInputArray, "marinara");
+  console.log(newPizza);
 
-  displayPizza(pizza1);
+  displayPizza(newPizza);
 }
 
-//add function to clear all pizzas
+//add checkout button and function that when pressed will remove form "form-div", change h3 "Your Cart" to "Final Order"
+// add a total printed at the bottom of pizza displays, and a "pay button" that returns "ERROR: Still learning how to steal credit card info"
 
 // Don't forget to add window.addEventListener("load", function);
 window.addEventListener("load", function() {
