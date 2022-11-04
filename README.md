@@ -19,9 +19,7 @@ define Pizza.prototype.totalCost()
       medium: 13,
       large: 15
     }
-
-    cheese: true (add 1, if false add 0)
-
+    cheese: 1
     meat: {
       chicken: 2,  
       ham: 1,
@@ -35,13 +33,6 @@ define Pizza.prototype.totalCost()
       spinach: 0,
       mushroom: 1,
       olive: 1
-    }
-    sauce: {
-      marinara: 0,
-      honey bbq: 0,
-      garlic parmesan: 0,
-      alfredo: 0,
-      ranch: 0
     }
   }
 
@@ -88,17 +79,45 @@ add option to add another Pizza object to their order
 Describe: Pizza()
 
 Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, non-meatArray, sauceSelect"
-Code: const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
-Expected Output: pizza1 /w {
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+Expected Output: 
+pizza1 /w {
   size: "medium",
   cheese: true,
   meat: ["sausage", "pepperoni"],
   non-meat: ["jalapeno", "onion"],
   sauce: "marinara"
   cost: 0
-  }
+}
 
   
-  Describe: Pizza.prototype.totalCost()
+Describe: Pizza.prototype.totalCost()
 
-  Test1: ""
+Test1: "It should check for 'medium' and add 13 to pizza1 cost"
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+pizza1.totalCost();
+Expected Output:
+pizza1.cost === 13
+
+Test2: "It should check for true and add 1 to pizza1 cost"
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+pizza1.totalCost();
+Expected Output:
+pizza1.cost === 14
+
+Test3: "It should check for ["sausage", "pepperoni"] and add 2 to pizza1 cost"
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+pizza1.totalCost();
+Expected Output:
+pizza1.cost === 16
+
+Test4: "It should check for ["jalapeno", "onion"] and add 1 to pizza1 cost"
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+pizza1.totalCost();
+Expected Output:
+pizza1.cost === 17
