@@ -17,34 +17,86 @@
 
   <div id="form-div" class="container">
     <form id="pizza-form">
+      
       <div id="pizza-sizes" class="container">
+        <h3>Sizes:</h3>
         <div class="row">
           <div class="col-4">
-            <label for="small-size">smallImg</label>
             <input id="small-size" type="radio" name="pizzaSizes" value="small">
+            <label for="small-size">smallImg</label>
           </div>
           <div class="col-4">
-            <label for="medium-size">mediumImg</label>
             <input id="medium-size" type="radio" name="pizzaSizes" value="medium" checked>
+            <label for="medium-size">mediumImg</label>
           </div>
           <div class="col-4">
-            <label for="large-size">largeImg</label>
             <input id="large-size" type="radio" name="pizzaSizes" value="large">
+            <label for="large-size">largeImg</label>
           </div>
         </div>
       </div>
 
       <!-- checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output) -->
       <div id="pizza-cheese" class="container">
+        <h3>Cheese:</h3>
+        <input id="cheese" type="checkbox" name="cheese-box" value="no">  
         <label for="cheese">Cheese</label>
-        <input id="cheese" type="checkbox" name="cheese-box" value="true">  
       </div>
-    <button type="submit">Checkout</button>
+
+      <!-- checkbox form for choice of meat input: chicken, ham, pepperoni, sausage -->
+      <div id="pizza-meat" class="container">
+        <h3>Meats:</h3>
+        <div class="row">
+          <div class="col-6">
+            <input id="pepperoni" type="checkbox" name="meat-box" value=" pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <br>
+            <input id="sausage" type="checkbox" name="meat-box" value=" sausage">
+            <label for="sausage">Sausage</label>
+          </div>
+          <div class="col-6">
+            <input id="ham" type="checkbox" name="meat-box" value=" ham">
+            <label for="ham">Ham</label>
+            <br>
+            <input id="chicken" type="checkbox" name="meat-box" value=" chicken">
+            <label for="chicken">Chicken</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- checkbox form for choice of non-meat input: pineapple, jalapeno, onion, spinach, mushroom, olive -->
+      <div id="pizza-non-meat" class="container">
+        <h3>Meats:</h3>
+        <div class="row">
+          <div class="col-6">
+            <input id="pineapple" type="checkbox" name="non-meat-box" value=" pineapple">
+            <label for="pineapple">Pineapple</label>
+            <br>
+            <input id="jalapeno" type="checkbox" name="non-meat-box" value=" jalapeno">
+            <label for="jalapeno">Jalapeno</label>
+            <br>
+            <input id="sausage" type="checkbox" name="non-meat-box" value=" sausage">
+            <label for="sausage">Sausage</label>
+          </div>
+          <div class="col-6">
+            <input id="ham" type="checkbox" name="non-meat-box" value=" ham">
+            <label for="ham">Ham</label>
+            <br>
+            <input id="chicken" type="checkbox" name="non-meat-box" value=" chicken">
+            <label for="chicken">Chicken</label>
+            <br>
+            <input id="sausage" type="checkbox" name="non-meat-box" value=" sausage">
+            <label for="sausage">Sausage</label>
+          </div>
+        </div>
+      </div>
+
+    <button type="submit">Add Pizza</button>
     </form>
   </div>
 
   <div id="output-div" class="container">
-    <h3 id="pizza-output">Your Pizza:</h3>
+    <h3 id="pizza-output">Your Cart:</h3>
   </div>
 </body>
 </html>

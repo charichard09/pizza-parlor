@@ -67,9 +67,9 @@ pizza1.totalCost();
 Expected Output:
 pizza1.cost === 13
 
-Test2: "It should check for true and add 1 to pizza1 cost"
+Test2: "It should check for yes and add 1 to pizza1 cost"
 Code: 
-const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const pizza1 = new Pizza("medium", "yes", ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 14

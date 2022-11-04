@@ -23,7 +23,7 @@ Pizza.prototype.totalCost = function () {
       this.cost += 0;
   }
 
-  if (this.cheese) {
+  if (this.cheese === "yes") {
     this.cost += 1;
   }
 
@@ -81,6 +81,8 @@ Pizza.prototype.totalCost = function () {
 function displayPizza(pizza) {
   const pizzaUl = document.createElement("ul");
 
+  pizza.totalCost();
+
   for (const key of Object.keys(pizza)) {
     let pizzaLi = document.createElement("li");
 
@@ -93,19 +95,22 @@ function displayPizza(pizza) {
 function handleFormSubmission (event) {
   event.preventDefault();
   const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
+  const pizzaMeatInputArray = Array.from(document.querySelectorAll("input[name='meat-box']:checked")).map(element => element.value);
   let pizzaCheeseInput;
   if (event.target.contains(document.querySelector("input[name='cheese-box']:checked"))) {
-    pizzaCheeseInput = true;
+    pizzaCheeseInput = "yes";
   } else {
-    pizzaCheeseInput = false;
+    pizzaCheeseInput = "no";
   }
   
 
-  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, ["jalapeno", "onion"], "marinara");
   console.log(pizza1);
 
   displayPizza(pizza1);
 }
+
+//add function to clear all pizzas
 
 // Don't forget to add window.addEventListener("load", function);
 window.addEventListener("load", function() {
