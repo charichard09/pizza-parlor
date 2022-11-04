@@ -96,6 +96,7 @@ function handleFormSubmission (event) {
   event.preventDefault();
   const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
   const pizzaMeatInputArray = Array.from(document.querySelectorAll("input[name='meat-box']:checked")).map(element => element.value);
+  const pizzaNonMeatInputArray = Array.from(document.querySelectorAll("input[name='non-meat-box']:checked")).map(element => element.value)
   let pizzaCheeseInput;
   if (event.target.contains(document.querySelector("input[name='cheese-box']:checked"))) {
     pizzaCheeseInput = "yes";
@@ -104,7 +105,7 @@ function handleFormSubmission (event) {
   }
   
 
-  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, ["jalapeno", "onion"], "marinara");
+  let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaNonMeatInputArray, "marinara");
   console.log(pizza1);
 
   displayPizza(pizza1);
