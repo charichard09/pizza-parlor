@@ -71,13 +71,25 @@ Pizza.prototype.totalCost = function () {
     }
   }
   
-  return this.cost
+  return this.cost;
 }
 
 
 
 
 //UI Logic
+function displayPizza(pizza) {
+  const pizzaUl = document.createElement("ul");
+
+  for (const key of Object.keys(pizza)) {
+    let pizzaLi = document.createElement("li");
+
+    pizzaLi.append(key + ": " + pizza[key].toString());
+    pizzaUl.append(pizzaLi);
+  }
+  document.getElementById("pizza-output").after(pizzaUl);
+}
+
 function handleFormSubmission (event) {
   event.preventDefault();
   const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
@@ -92,7 +104,7 @@ function handleFormSubmission (event) {
   let pizza1 = new Pizza(pizzaSizeInput, pizzaCheeseInput, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
   console.log(pizza1);
 
-  displayPizza();
+  displayPizza(pizza1);
 }
 
 // Don't forget to add window.addEventListener("load", function);
