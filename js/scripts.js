@@ -77,9 +77,14 @@ Pizza.prototype.totalCost = function () {
 
 //UI Logic
 function highlightPizza (event) {
-  // for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
-  //   pizzaImg.removeAttribute("style");
-  // }
+  for (const pizzaImg of Array.from(document.querySelectorAll("input[name='pizza-sizes']"))) {
+    pizzaImg.removeAttribute("style");
+    pizzaImg.previousSibling.style = "display: none;";
+  }
+
+  for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
+    pizzaImg.removeAttribute("style");
+  }
   event.target.style = "filter: drop-shadow(2px 0px 0 red) drop-shadow(0px 2px 0 red) drop-shadow(-2px -0px 0 red) drop-shadow(-0px -2px 0 red);"
 }
 
