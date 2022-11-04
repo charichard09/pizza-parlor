@@ -9,12 +9,12 @@ function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect)
   this.cost = 0;
 }
 
-// Test1: "It should check for 'medium' and add 13 to pizza1 cost"
+// Test2: "It should check for true and add 1 to pizza1 cost"
 // Code: 
 // const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 // pizza1.totalCost();
 // Expected Output:
-// pizza1.cost === 13
+// pizza1.cost === 14
 
 Pizza.prototype.totalCost = function () {
   switch (this.size) {
@@ -30,6 +30,12 @@ Pizza.prototype.totalCost = function () {
     default:
       this.cost += 0;
   }
+
+  if (this.cheese) {
+    this.cost += 1;
+  }
+
+  
   
   return this.cost
 }
