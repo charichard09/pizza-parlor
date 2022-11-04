@@ -83,10 +83,10 @@ Pizza.prototype.totalCost = function () {
 
 function handleFormSubmission (event) {
   event.preventDefault();
-
   const pizzaSizeInput = document.querySelector("input[name='pizzaSizes']:checked").value;
 
   let pizza1 = new Pizza(pizzaSizeInput, true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+  console.log(pizza1);
 }
 
 // Don't forget to add window.addEventListener("load", function);
