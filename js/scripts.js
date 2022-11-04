@@ -1,18 +1,5 @@
 //Business Logic
 
-// Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect"
-// Code: 
-// const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
-// Expected Output: 
-// pizza1 /w {
-//   size: "medium",
-//   cheese: true,
-//   meat: ["sausage", "pepperoni"],
-//   non-meat: ["jalapeno", "onion"],
-//   sauce: "marinara"
-//   cost: 0
-// }
-
 function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect) {
   this.size = sizeSelect;
   this.cheese = cheeseBoolean;
@@ -22,8 +9,30 @@ function Pizza (sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect)
   this.cost = 0;
 }
 
+// Test1: "It should check for 'medium' and add 13 to pizza1 cost"
+// Code: 
+// const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+// pizza1.totalCost();
+// Expected Output:
+// pizza1.cost === 13
 
-
+Pizza.prototype.totalCost = function () {
+  switch (this.size) {
+    case ("small"):
+      this.cost += 11;
+      break;
+    case ("medium"):
+      this.cost += 13;
+      break;
+    case ("large"):
+      this.cost += 15;
+      break;
+    default:
+      this.cost += 0;
+  }
+  
+  return this.cost
+}
 
 
 
