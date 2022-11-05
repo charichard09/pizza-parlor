@@ -35,10 +35,12 @@ body {
 
 #toppings-box {
   margin: 1%;
+  padding: .5%;
 }
 
 #cart-box {
   margin: 1%;
+  padding: 1%;
 }
 
 #add-pizza {
@@ -46,3 +48,9 @@ body {
   margin: 5%;
   text-align: center;
 }
+
+svg {
+  margin-bottom: 6px;
+  margin-right: 5px;
+}
+
