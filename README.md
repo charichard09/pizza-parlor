@@ -74,6 +74,13 @@ pizza1.totalCost();
 Expected Output:
 pizza1.cost === 17
 
+Test4: "It should check for "marinara" and "marinara" as the value for pizza1.sauce"
+Code: 
+const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+pizza1.totalCost();
+Expected Output:
+pizza1.sauce === "marinara"
+
 ```
 
 ## Known Bugs
