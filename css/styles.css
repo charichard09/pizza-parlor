@@ -18,3 +18,12 @@ body {
 #large-pizza {
   width: 95%;
 }
+
+#umaru {
+  border: solid black 7px;
+}
+
+.general-box {
+  border: solid black 5px;
+  background-color: #FA8751;
+}

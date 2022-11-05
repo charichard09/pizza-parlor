@@ -123,7 +123,7 @@ function displayTotal(pizzaCosts) {
   for (const cost of pizzaCosts) {
     total += parseInt(cost);
   }
-  totalH5.append("Total: " + total.toString());
+  totalH5.append("Total: $" + total.toString());
   totalH5.setAttribute("id", "total")
   document.getElementById("output-div").after(totalH5);
 }
