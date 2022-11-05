@@ -46,35 +46,35 @@ pizza1 /w {
   
 Describe: Pizza.prototype.totalCost()
 
-Test1: "It should check for 'medium' and add 13 to pizza1 cost"
+Test1: "It should check for 'medium' input and add 13 to pizza1 cost"
 Code: 
 const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 13
 
-Test2: "It should check for yes and add 1 to pizza1 cost"
+Test2: "It should check for 'yes' input and add 1 to pizza1 cost"
 Code: 
 const pizza1 = new Pizza("medium", "yes", ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 14
 
-Test3: "It should check for ["sausage", "pepperoni"] and add 2 to pizza1 cost"
+Test3: "It should check for ["sausage", "pepperoni"] input and add 2 to pizza1 cost"
 Code: 
 const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 16
 
-Test4: "It should check for ["jalapeno", "onion"] and add 1 to pizza1 cost"
+Test4: "It should check for ["jalapeno", "onion"] input and add 1 to pizza1 cost"
 Code: 
 const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 17
 
-Test5: "It should check for "marinara" and "marinara" as the value for pizza1.sauce"
+Test5: "It should check for "marinara" input and "marinara" as the value for pizza1.sauce"
 Code: 
 const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
 pizza1.totalCost();
