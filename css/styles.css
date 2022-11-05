@@ -4,7 +4,7 @@ body {
   background-position: top, bottom;
   background-size: 100% auto;
   background-color: transparent;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat;
 }
 
 .hidden {
