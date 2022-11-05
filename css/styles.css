@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
-  font-family: sans-serif, Courier, monospace;
-  background-image: url("../img/parlor.jpg");
+  background-image: url("../img/parlor.jpg"), url("../img/pizza2.png");
+  background-position: top, bottom;
   background-size: 100% auto;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -31,6 +31,7 @@ body {
 .general-box {
   border: solid black 5px;
   background-color: RGBA(250, 135, 81, .85);
+  font-family: 'Great Vibes', cursive;
 }
 
 #toppings-box {
@@ -41,11 +42,14 @@ body {
 #cart-box {
   margin: 1%;
   padding: 1%;
+  font-size: 1cm;
 }
 
 #add-pizza {
   display: block;
-  margin: 5%;
+  margin-bottom: 5%;
+  margin-left: 12%;
+  line-height: 2em;
   text-align: center;
 }
 
@@ -56,8 +60,27 @@ svg {
 
 #header {
   height: 7em;
-  @font-face {
-    font-family: "Chomsky";
-    src: url("../font/Chomsky.otf");
-  }
+}
+
+h1 {
+  line-height: 130px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5cm;
+}
+
+#pizza-form {
+  font-size: 1cm;
+}
+
+h3 {
+  font-size: 1.5cm;
+  margin-top: 15px;
+}
+
+h6 {
+  font-size: 1.2cm;
+}
+
+h5 {
+  font-size: 1.2cm;
 }
