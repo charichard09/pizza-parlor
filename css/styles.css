@@ -1,6 +1,10 @@
 body {
   box-sizing: border-box;
   font-family: sans-serif, Courier, monospace;
+  background-image: url("../img/parlor.jpg");
+  background-size: 100% auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
 }
 
 .hidden {
@@ -21,9 +25,24 @@ body {
 
 #umaru {
   border: solid black 7px;
+  margin-top: 15%;
 }
 
 .general-box {
   border: solid black 5px;
   background-color: #FA8751;
+}
+
+#toppings-box {
+  margin: 1%;
+}
+
+#cart-box {
+  margin: 1%;
+}
+
+#add-pizza {
+  display: block;
+  margin: 5%;
+  text-align: center;
 }
