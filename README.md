@@ -1,47 +1,33 @@
-<!-- pseusdo code -->
-Prompt: Create a website where a user can make a pizza. Have the options to choose individual toppings and size then give a total. 
+# _Pizza Parlor_
 
+#### By _**Richard Cha**_
 
+#### _A web application that allows users to pick from options to create multiple pizzas and get a total._
 
+## Technologies Used
 
+* _JavaScript_
+* _HTML_
+* _CSS_
+* _Bootstrap_
 
+## Description
 
-      make this dynamic? as users select toppings, everytime call totalCost() to print updated cost
+_A web application that gives users options for pizza size, cheese, meats, other toppings, and sauces to create a pizza. Once a user is satisfied they may click "Add Pizza" and their choices will be tallied to create a total. If a user would like to add another pizza they may and once added to cart will update the total. Once a user is finished they may restart the process hitting the "Restart Order" button._
 
-have a checkout() function attached with a button element type="submit" to print final pizza properties and cost
+## Setup/Installation Requirements
 
+* _Go to link:_
+* [Pizza Parlor](https://charichard09.github.io/pizza-parlor)
+* _Select your toppings and hit Add Pizza to get a total_
 
+* _Alternatively:_
+* _Clone repo to a local directory_
+* _Open Index.html in your default browser_
 
-UI pseudocode:
-radio form of images for size small, medium, large 
-  put into 3 columns?
+## Tests
 
-checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output)
-
-radio form for choice of sauce input that will go into final pizza output
-  marinara, honey bbq, garlic parmesan, alfredo, ranch
-    NON-MVP: make this a checkbox that when checked, will reveal radio form for sauces
-
-checkbox form for choice of meat input: chicken, ham, pepperoni, sausage
-
-checkbox form for choice of non-meat input: pineapple, jalapeno, onion, spinach, mushroom, olive
-
-"checkout" button element with type="submit"
-
-area below to show final pizza properties and price after hitting submit
-
-
-
-NON-MVP: add pictures for each option, and a final pizza picture with all
-add option to add another Pizza object to their order
-  this can be a let checkout = {each pizza obj} which prints all pizzas and totals each cost
-
-
-
-
-
-<!-- TDD -->
-
+```
 Describe: Pizza()
 
 Test1: "It should return a Pizza object with properties for sizeSelect, cheeseBoolean, meatArray, nonMeatArray, sauceSelect"
@@ -87,3 +73,35 @@ const pizza1 = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", 
 pizza1.totalCost();
 Expected Output:
 pizza1.cost === 17
+
+```
+
+## Known Bugs
+
+* _None_
+
+## License
+
+_If you have any issues or have questions, ideas or concerns please contact me at [charichard09@gmail.com](mailto:charichard09@gmail.com)_
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Copyright (c) _11-4-22_ _Richard Cha_
