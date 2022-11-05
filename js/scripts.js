@@ -1,7 +1,7 @@
 //Business Logic
-function Pizza (sizeSelect, cheeseBoolean, meatArray, otherArray, sauceSelect) {
+function Pizza (sizeSelect, cheeseSelect, meatArray, otherArray, sauceSelect) {
   this.size = sizeSelect;
-  this.cheese = cheeseBoolean;
+  this.cheese = cheeseSelect;
   this.meats = meatArray;
   this.others = otherArray;
   this.sauce = sauceSelect;
@@ -165,7 +165,7 @@ function handleFormSubmission (event) {
 
   let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaOtherInputArray, pizzaSauceInput);
   displayPizza(newPizza);
-  
+
   const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
   displayTotal(pizzaCostsArray);
 }
