@@ -11,15 +11,14 @@
 </head>
 <body class="jumbotron">
 
-  <div id="header" class="container">
+  <div id="header" class="container-fluid general-box">
     <h1>Pizza Parlor</h1>
   </div>
 
   <div class="row">
-    <div class="col-8">
+    <div class="col-8 general-box">
       <div id="form-div" class="container">
         <form id="pizza-form">
-          
           <div id="pizza-sizes" class="container">
             <h3>Sizes:</h3>
             <div class="row">
@@ -37,15 +36,11 @@
               </div>
             </div>
           </div>
-
-          <!-- checkbox form for cheese (if checked, add cheese, if not checked, dont add cheese to final pizza output) -->
           <div id="pizza-cheese" class="container">
             <h3>Cheese:</h3>
             <input id="cheese" type="checkbox" name="cheese-box" value="no">  
             <label for="cheese">Cheese</label>
           </div>
-
-          <!-- checkbox form for choice of meat input: chicken, ham, pepperoni, sausage -->
           <div id="pizza-meat" class="container">
             <h3>Meats:</h3>
             <div class="row">
@@ -65,8 +60,6 @@
               </div>
             </div>
           </div>
-
-          <!-- checkbox form for choice of non-meat input: pineapple, honey-bbq, onion, spinach, mushroom, olive -->
           <div id="pizza-other" class="container">
             <h3>Others:</h3>
             <div class="row">
@@ -92,8 +85,6 @@
               </div>
             </div>
           </div>
-
-          <!-- radio form for choice of sauce: marinara, honey bbq, garlic parmesan, alfredo, ranch -->
           <div id="pizza-sauce" class="container">
             <div class="row">
               <div class="col-5">
@@ -114,16 +105,16 @@
                 <label for="ranch">Ranch</label>
               </div>
               <div class="col-7">
-                <img src="./img/umaru.jpeg" alt="picture of Umaru eating a pizza" class="img-fluid">
+                <img src="./img/umaru.jpeg" alt="picture of Umaru eating a pizza" class="img-fluid" id="umaru">
               </div>
             </div>
           </div>
-
         <button type="submit">Add Pizza</button>
         </form>
       </div>
     </div>
-      <div class="col-4">
+    
+      <div class="col-4 general-box">
         <div id="output-div" class="container">
           <h3 id="pizza-output">Your Cart:</h3>
         </div>
