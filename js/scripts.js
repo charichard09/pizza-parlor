@@ -164,9 +164,9 @@ function handleFormSubmission (event) {
   }
 
   let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaOtherInputArray, pizzaSauceInput);
-  const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
-
   displayPizza(newPizza);
+  
+  const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
   displayTotal(pizzaCostsArray);
 }
 
