@@ -113,24 +113,25 @@ function handleRestartButton () {
 }
 
 function displayTotal(pizzaCosts) {
+  let total = 0;
+  let totalElement = document.createElement("h5");
+
   if (document.body.contains(document.getElementById("total"))) {
     document.getElementById("total").remove();
   }
 
-  let total = 0;
-  let totalH5 = document.createElement("h5");
-
   for (const cost of pizzaCosts) {
     total += parseInt(cost);
   }
-  totalH5.append("Total: $" + total.toString());
-  totalH5.setAttribute("id", "total")
-  document.getElementById("output-div").after(totalH5);
+
+  totalElement.append("Total: $" + total.toString());
+  totalElement.setAttribute("id", "total")
+  document.getElementById("output-div").after(totalElement);
 }
 
 function displayPizza(pizza) {
   const pizzaUl = document.createElement("ul");
-  const pizzaH6 = document.createElement("h6");
+  const pizzaName = document.createElement("h6");
   pizza.totalCost();
 
   for (const key of Object.keys(pizza)) {
@@ -142,9 +143,9 @@ function displayPizza(pizza) {
     pizzaLi.append(key + ": " + pizza[key].toString());
     pizzaUl.append(pizzaLi);
   }
-  pizzaH6.append(pizza.size + " pizza:");
+  pizzaName.append(pizza.size + " pizza:");
   document.getElementById("pizza-output").after(pizzaUl);
-  document.getElementById("pizza-output").after(pizzaH6);
+  document.getElementById("pizza-output").after(pizzaName);
   document.getElementById("restart").removeAttribute("class");
 }
 
@@ -155,19 +156,17 @@ function handleFormSubmission (event) {
   const pizzaOtherInputArray = Array.from(document.querySelectorAll("input[name='other-box']:checked")).map(element => element.value)
   const pizzaSauceInput = document.querySelector("input[name='pizza-sauces']:checked").value;
   let pizzaCheeseInput;
+
   if (event.target.contains(document.querySelector("input[name='cheese-box']:checked"))) {
     pizzaCheeseInput = "yes";
   } else {
     pizzaCheeseInput = "no";
   }
 
-
   let newPizza = new Pizza(pizzaSizeInput, pizzaCheeseInput, pizzaMeatInputArray, pizzaOtherInputArray, pizzaSauceInput);
-  console.log(newPizza);
+  const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
 
   displayPizza(newPizza);
-
-  const pizzaCostsArray = Array.from(document.querySelectorAll("li[value]")).map(element => parseInt(element.getAttribute("value")));
   displayTotal(pizzaCostsArray);
 }
 
