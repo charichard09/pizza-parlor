@@ -30,7 +30,7 @@ body {
 
 .general-box {
   border: solid black 5px;
-  background-color: #FA8751;
+  background-color: RGBA(250, 135, 81, .85);
 }
 
 #toppings-box {
@@ -54,3 +54,10 @@ svg {
   margin-right: 5px;
 }
 
+#header {
+  height: 7em;
+  @font-face {
+    font-family: "Chomsky";
+    src: url("../font/Chomsky.otf");
+  }
+}
