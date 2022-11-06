@@ -81,6 +81,16 @@ newPizza.totalCost();
 Expected Output:
 newPizza.sauce === "marinara"
 
+
+Describe: sumOfAllPizzas(costsArray)
+
+Test1: "It should take a lrg chz pizza which costs $16 and a medium chicken and jalapeno pineapple pizza which costs $17 and 
+have a 'Total: $33'"
+Code:
+sumOfAllPizzas(costsArray)
+Expected Output:
+"Total: $33"
+
 ```
 
 ## Known Bugs
