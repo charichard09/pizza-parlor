@@ -29,16 +29,16 @@ Pizza.prototype.totalCost = function () {
 
   for (const meat of this.meats) {
     switch (meat) {
-      case ("chicken"):
+      case (" chicken"):
       this.cost += 2;
       break;
-      case ("ham"):
+      case (" ham"):
       this.cost += 1;
       break; 
-      case ("pepperoni"):
+      case (" pepperoni"):
       this.cost += 1;
       break; 
-      case ("sausage"):
+      case (" sausage"):
       this.cost += 1;
       break; 
       default: 
@@ -48,22 +48,22 @@ Pizza.prototype.totalCost = function () {
 
   for (const other of this.others) {
     switch (other) {
-      case ("pineapple"):
+      case (" pineapple"):
         this.cost += 1;
         break; 
-      case ("jalapeno"):
+      case (" jalapeno"):
         this.cost += 1;
         break;  
-      case ("onion"):
+      case (" onion"):
         this.cost += 0;
         break; 
-      case ("spinach"):
+      case (" spinach"):
         this.cost += 1;
         break; 
-      case ("mushroom"):
+      case (" mushroom"):
         this.cost += 1;
         break; 
-      case ("olive"):
+      case (" olive"):
         this.cost += 1;
         break; 
       default:
@@ -72,6 +72,15 @@ Pizza.prototype.totalCost = function () {
   }
   
   return this.cost;
+}
+
+function sumOfAllPizzas(costsArray) {
+  total = 0;
+  for (const cost of costsArray) {
+    total += cost; 
+  }
+
+  return total;
 }
 
 
@@ -100,8 +109,8 @@ function handleRestartButton () {
     pizzaUl.remove();
   }
 
-  for (const pizzaH6 of Array.from(document.querySelectorAll("h6"))) {
-    pizzaH6.remove();
+  for (const pizzaName of Array.from(document.querySelectorAll("h6"))) {
+    pizzaName.remove();
   }
 
   for (const pizzaImg of Array.from(document.querySelectorAll("img[src='./img/pizza.png']"))) {
@@ -112,16 +121,14 @@ function handleRestartButton () {
   document.getElementById("restart").setAttribute("class", "hidden");
 }
 
+
+//TODO: pull out total math to Business Logic
 function displayTotal(pizzaCosts) {
-  let total = 0;
+  let total = sumOfAllPizzas(pizzaCosts);
   let totalElement = document.createElement("h5");
 
   if (document.body.contains(document.getElementById("total"))) {
     document.getElementById("total").remove();
-  }
-
-  for (const cost of pizzaCosts) {
-    total += parseInt(cost);
   }
 
   totalElement.append("Total: $" + total.toString());

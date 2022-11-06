@@ -48,35 +48,35 @@ Describe: Pizza.prototype.totalCost()
 
 Test1: "It should check for 'medium' input and add 13 to newPizza cost"
 Code: 
-const newPizza = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 13
 
 Test2: "It should check for 'yes' input and add 1 to newPizza cost"
 Code: 
-const newPizza = new Pizza("medium", "yes", ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const newPizza = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 14
 
 Test3: "It should check for ["sausage", "pepperoni"] input and add 2 to newPizza cost"
 Code: 
-const newPizza = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 16
 
 Test4: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
 Code: 
-const newPizza = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 17
 
 Test5: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
 Code: 
-const newPizza = new Pizza("medium", true, ["sausage", "pepperoni"], ["jalapeno", "onion"], "marinara");
+const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.sauce === "marinara"
