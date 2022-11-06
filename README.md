@@ -84,8 +84,8 @@ newPizza.sauce === "marinara"
 
 Describe: sumOfAllPizzas(costsArray)
 
-Test1: "It should take a lrg chz pizza which costs $16 and a medium chicken cheese jalapeno and pineapple pizza which costs $18 and 
-have a 'Total: $33'"
+Test1: "It should take a lrg chz pizza with 'cost' $16 and a medium chicken cheese jalapeno and pineapple pizza wtih 'costs' $18 and 
+add them for a 'Total: $33'"
 Code:
 sumOfAllPizzas(costsArray)
 Expected Output:
