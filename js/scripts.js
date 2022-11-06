@@ -121,8 +121,6 @@ function handleRestartButton () {
   document.getElementById("restart").setAttribute("class", "hidden");
 }
 
-
-//TODO: pull out total math to Business Logic
 function displayTotal(pizzaCosts) {
   let total = sumOfAllPizzas(pizzaCosts);
   let totalElement = document.createElement("h5");
