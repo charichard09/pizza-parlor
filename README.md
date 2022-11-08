@@ -84,10 +84,13 @@ newPizza.sauce === "marinara"
 
 Describe: sumOfAllPizzas(costsArray)
 
-Test1: "It should take a lrg chz pizza with 'cost' $16 and a medium chicken cheese jalapeno and pineapple pizza wtih 'costs' $18 and 
+Test1: "It should take a lrg chz pizza with 'cost' $16 and a medium chicken cheese jalapeno and pineapple pizza with 'costs' $18 and 
 add them for a 'Total: $33'"
 Code:
-sumOfAllPizzas(costsArray)
+const newPizza1 = new Pizza("medium", true, [" chicken"], [" jalapeno", " pineapple"], "marinara");
+const newPizza2 = new Pizza("large", true, [], [], "marinara");
+const costsArray = [newPizza1.cost, newPizza2.cost];
+sumOfAllPizzas(costsArray);
 Expected Output:
 "Total: $33" 
 
