@@ -75,7 +75,7 @@ Pizza.prototype.totalCost = function () {
 }
 
 function sumOfAllPizzas(costsArray) {
-  total = 0;
+  let total = 0;
   for (const cost of costsArray) {
     total += cost; 
   }
