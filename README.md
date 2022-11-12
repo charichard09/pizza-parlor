@@ -130,13 +130,6 @@ Expected Output:
 expect(newPizzaOnion.cost).toEqual(16);
 expect(newPizzaNoOther.cost).toEqual(16);
 
-Test7: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
-Code: 
-const newPizza = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
-newPizza.totalCost();
-Expected Output:
-newPizza.sauce === "marinara"
-
 
 Describe: sumOfAllPizzas(costsArray)
 
