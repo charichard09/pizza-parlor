@@ -96,10 +96,10 @@ expect(newPizzaChicken.cost).toEqual(16);
 
 Test5: "It should check for no meat input and add 0 to Pizza cost."
 Code: 
-const newPizzaChicken = new Pizza("medium", "yes", [""], [" jalapeno", " onion"], "marinara");
+const newPizzaNoMeat = new Pizza("medium", "yes", [""], [" jalapeno", " onion"], "marinara");
 newPizzaNoMeat.totalCost();
 Expected Output:
-expect(newPizzaNoMeat.cost).toEqual(16);
+expect(newPizzaNoMeat.cost).toEqual(14);
 
 Test6: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
 Code: 
