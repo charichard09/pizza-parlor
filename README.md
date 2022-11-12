@@ -94,19 +94,31 @@ newPizzaChicken.totalCost();
 Expected Output:
 expect(newPizzaChicken.cost).toEqual(16);
 
-Test5: "It should check for no meat input and add 0 to Pizza cost."
+Test6: "It should check for no meat input and add 0 to Pizza cost."
 Code: 
 const newPizzaNoMeat = new Pizza("medium", "yes", [""], [" jalapeno", " onion"], "marinara");
 newPizzaNoMeat.totalCost();
 Expected Output:
 expect(newPizzaNoMeat.cost).toEqual(14);
 
-Test6: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
+Test6: "It should check for " pineapple", " jalapeno", " spinach", " mushroom", or " olive" input and add 1 to newPizza cost"
 Code: 
-const newPizza = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
-newPizza.totalCost();
+const newPizzaPineapple = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" pineapple"], "marinara");
+newPizzaPineapple.totalCost();
+const newPizzaJalapeno = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno"], "marinara");
+newPizzaJalapeno.totalCost();
+const newPizzaSpinach = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" spinach"], "marinara");
+newPizzaSpinach.totalCost();
+const newPizzaMushroom = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" mushroom"], "marinara");
+newPizzaMushroom.totalCost();
+const newPizzaOlive = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" olive"], "marinara");
+newPizzaOlive.totalCost();
 Expected Output:
-newPizza.cost === 17
+expect(newPizzaPineapple.cost).toEqual(17);
+expect(newPizzaJalapeno.cost).toEqual(17);
+expect(newPizzaSpinach.cost).toEqual(17);
+expect(newPizzaMushroom.cost).toEqual(17);
+expect(newPizzaOlive.cost).toEqual(17);
 
 Test7: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
 Code: 
