@@ -101,7 +101,7 @@ newPizzaNoMeat.totalCost();
 Expected Output:
 expect(newPizzaNoMeat.cost).toEqual(14);
 
-Test6: "It should check for " pineapple", " jalapeno", " spinach", " mushroom", or " olive" input and add 1 to newPizza cost"
+Test6: "It should check for ' pineapple', ' jalapeno', ' spinach', ' mushroom', or ' olive' input and add 1 to newPizza cost"
 Code: 
 const newPizzaPineapple = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" pineapple"], "marinara");
 newPizzaPineapple.totalCost();
