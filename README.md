@@ -74,7 +74,7 @@ newPizza.totalCost();
 Expected Output:
 newPizza.cost === 14
 
-Test5: "It should check for 'sausage', 'pepperoni', or 'ham' input and add 1 to newPizza cost"
+Test5: "It should check for 'sausage', 'pepperoni', or 'ham' input and add 1 to Pizza cost"
 Code: 
 const newPizzaSausage = new Pizza("medium", "yes", [" sausage"], [" jalapeno", " onion"], "marinara");
 const newPizzaPepperoni = new Pizza("medium", "yes", [" pepperoni"], [" jalapeno", " onion"], "marinara");
