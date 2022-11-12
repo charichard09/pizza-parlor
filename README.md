@@ -53,28 +53,42 @@ newPizza.totalCost();
 Expected Output:
 newPizza.cost === 13
 
-Test2: "It should check for 'yes' input and add 1 to newPizza cost"
+Test2: "It should check for 'small' input and add 11 to newPizza cost"
+Code: 
+const newPizza = new Pizza("small", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
+newPizza.totalCost();
+Expected Output:
+newPizza.cost === 13
+
+Test3: "It should check for 'large' input and add 15 to newPizza cost"
+Code: 
+const newPizza = new Pizza("large", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
+newPizza.totalCost();
+Expected Output:
+newPizza.cost === 13
+
+Test4: "It should check for 'yes' input and add 1 to newPizza cost"
 Code: 
 const newPizza = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 14
 
-Test3: "It should check for ["sausage", "pepperoni"] input and add 2 to newPizza cost"
+Test5: "It should check for ["sausage", "pepperoni"] input and add 2 to newPizza cost"
 Code: 
 const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 16
 
-Test4: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
+Test6: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
 Code: 
 const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
 newPizza.cost === 17
 
-Test5: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
+Test7: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
 Code: 
 const newPizza = new Pizza("medium", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
