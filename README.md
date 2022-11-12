@@ -46,7 +46,7 @@ newPizza /w {
   
 Describe: Pizza.prototype.totalCost()
 
-Test1: "It should check for 'medium' input and add 13 to newPizza cost"
+Test1: "It should check for 'medium' or no input since 'medium' is auto checked and add 13 to newPizza cost"
 Code: 
 const newPizza = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
@@ -94,6 +94,12 @@ newPizzaChicken.totalCost();
 Expected Output:
 expect(newPizzaChicken.cost).toEqual(16);
 
+Test5: "It should check for no meat input and add 0 to Pizza cost."
+Code: 
+const newPizzaChicken = new Pizza("medium", "yes", [""], [" jalapeno", " onion"], "marinara");
+newPizzaNoMeat.totalCost();
+Expected Output:
+expect(newPizzaNoMeat.cost).toEqual(16);
 
 Test6: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
 Code: 

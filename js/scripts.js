@@ -19,8 +19,6 @@ Pizza.prototype.totalCost = function () {
     case ("large"):
       this.cost += 15;
       break;
-    default:
-      this.cost += 0;
   }
 
   if (this.cheese === "yes") {
