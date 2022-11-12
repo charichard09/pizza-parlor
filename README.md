@@ -58,7 +58,7 @@ Code:
 const newPizza = new Pizza("small", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
-newPizza.cost === 13
+newPizza.cost === 11
 
 Test3: "It should check for 'large' input and add 15 to newPizza cost"
 Code: 
