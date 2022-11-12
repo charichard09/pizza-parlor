@@ -120,7 +120,7 @@ expect(newPizzaSpinach.cost).toEqual(17);
 expect(newPizzaMushroom.cost).toEqual(17);
 expect(newPizzaOlive.cost).toEqual(17);
 
-Test7: "It should check for ' onion' or no other input and add 0 to newPizza cost"
+Test8: "It should check for ' onion' or no other input and add 0 to newPizza cost"
 Code: 
 const newPizzaOnion = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" onion"], "marinara");
 newPizzaOnion.totalCost();
