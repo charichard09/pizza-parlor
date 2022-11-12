@@ -134,14 +134,16 @@ expect(newPizzaNoOther.cost).toEqual(16);
 Describe: sumOfAllPizzas(costsArray)
 
 Test1: "It should take a lrg chz pizza with 'cost' $16 and a medium chicken cheese jalapeno and pineapple pizza with 'costs' $18 and 
-add them for a 'Total: $33'"
+add them for a 'Total: $34'"
 Code:
 const newPizza1 = new Pizza("medium", "yes", [" chicken"], [" jalapeno", " pineapple"], "marinara");
+newPizza1.totalCost();
 const newPizza2 = new Pizza("large", "yes", [], [], "marinara");
+newPizza2.totalCost();
 const costsArray = [newPizza1.cost, newPizza2.cost];
 sumOfAllPizzas(costsArray);
 Expected Output:
-"Total: $33" 
+expect(sumOfAllPizzas(costsArray)).toEqual(34);
 
 ```
 
