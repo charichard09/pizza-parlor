@@ -83,9 +83,17 @@ newPizzaSausage.totalCost();
 newPizzaPepperoni.totalCost();
 newPizzaHam.totalCost();
 Expected Output:
-const newPizzaSausage === 15
-const newPizzaPepperoni === 15
-const newPizzaHam === 15
+expect(newPizzaSausage.cost).toEqual(15);
+expect(newPizzaPepperoni.cost).toEqual(15);
+expect(newPizzaHam.cost).toEqual(15);
+
+Test5: "It should check for 'chicken' input and add 2 to Pizza cost"
+Code: 
+const newPizzaChicken = new Pizza("medium", "yes", [" chicken"], [" jalapeno", " onion"], "marinara");
+newPizzaChicken.totalCost();
+Expected Output:
+expect(newPizzaChicken.cost).toEqual(16);
+
 
 Test6: "It should check for ["jalapeno", "onion"] input and add 1 to newPizza cost"
 Code: 
