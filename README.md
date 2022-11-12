@@ -101,7 +101,7 @@ newPizzaNoMeat.totalCost();
 Expected Output:
 expect(newPizzaNoMeat.cost).toEqual(14);
 
-Test6: "It should check for ' pineapple', ' jalapeno', ' spinach', ' mushroom', or ' olive' input and add 1 to newPizza cost"
+Test7: "It should check for ' pineapple', ' jalapeno', ' spinach', ' mushroom', or ' olive' input and add 1 to newPizza cost"
 Code: 
 const newPizzaPineapple = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" pineapple"], "marinara");
 newPizzaPineapple.totalCost();
@@ -119,6 +119,16 @@ expect(newPizzaJalapeno.cost).toEqual(17);
 expect(newPizzaSpinach.cost).toEqual(17);
 expect(newPizzaMushroom.cost).toEqual(17);
 expect(newPizzaOlive.cost).toEqual(17);
+
+Test7: "It should check for ' onion' or no other input and add 0 to newPizza cost"
+Code: 
+const newPizzaOnion = new Pizza("medium", "yes", [" sausage", " pepperoni"], [" onion"], "marinara");
+newPizzaOnion.totalCost();
+const newPizzaNoOther = new Pizza("medium", "yes", [" sausage", " pepperoni"], [""], "marinara");
+newPizzaNoOther.totalCost();
+Expected Output:
+expect(newPizzaOnion.cost).toEqual(16);
+expect(newPizzaNoOther.cost).toEqual(16);
 
 Test7: "It should check for "marinara" input and "marinara" as the value for newPizza.sauce"
 Code: 
