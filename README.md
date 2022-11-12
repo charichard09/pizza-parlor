@@ -65,7 +65,7 @@ Code:
 const newPizza = new Pizza("large", true, [" sausage", " pepperoni"], [" jalapeno", " onion"], "marinara");
 newPizza.totalCost();
 Expected Output:
-newPizza.cost === 13
+newPizza.cost === 15
 
 Test4: "It should check for 'yes' input and add 1 to newPizza cost"
 Code: 
