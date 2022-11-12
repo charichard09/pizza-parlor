@@ -78,7 +78,7 @@ Test5: "It should check for 'sausage', 'pepperoni', or 'ham' input and add 1 to 
 Code: 
 const newPizzaSausage = new Pizza("medium", true, [" sausage"], [" jalapeno", " onion"], "marinara");
 const newPizzaPepperoni = new Pizza("medium", true, [" pepperoni"], [" jalapeno", " onion"], "marinara");
-const newPizzaHam = new Pizza("medium", true, ["ham"], [" jalapeno", " onion"], "marinara");
+const newPizzaHam = new Pizza("medium", true, [" ham"], [" jalapeno", " onion"], "marinara");
 newPizzaSausage.totalCost();
 newPizzaPepperoni.totalCost();
 newPizzaHam.totalCost();
